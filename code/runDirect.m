@@ -234,7 +234,7 @@ function [solution fns state ops idx] = runDirect(params)
             solution.derived.load_i_G_dc .* solution.derived.load_v_G_dc;
 
         % Generation
-        solution.derived.generation_A = ...
+        solution.derived.generation_G = ...
             (cell2mat(params.microgrid.v_G) + solution.u_G) .* solution.i_G;
 
         % Storage
